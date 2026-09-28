@@ -1,23 +1,60 @@
 aid: berkeley-lights
+
 name: Berkeley Lights
-description: 'Berkeley Lights is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Berkeley Lights is a biotechnology company that develops and commercializes advanced cell analysis platforms, enabling researchers to perform high‑throughput single‑cell assays and functional screening. The firm provides hardware, software, and cloud‑based services to accelerate discovery in therapeutics, genomics, and cell therapy development. Founded in 2015 and based in the San Francisco Bay Area, Berkeley Lights has been recognized for its innovative optofluidic technology and was acquired by Bruker in 2023.'
+
 url: https://raw.githubusercontent.com/api-evangelist/berkeley-lights/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Biotechnology
+- Cell Analysis
+- Optofluidic
+- Single-Cell
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/berkeley-lights-hosts.yml
+- type: Vendors
+  url: vendors/berkeley-lights-vendors.yml
+- type: DomainSecurity
+  url: security/berkeley-lights-domain-security.yml
 - type: Website
   url: https://forgeglobal.com/berkeley-lights_stock/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The company website redirects to Bruker Cellular Analysis with no API documentation or machine‑readable spec.
+  evidence:
+    - url: https://www.berkeleylights.com
+      status: 200
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
